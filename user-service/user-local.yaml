@@ -15,3 +15,7 @@ management:
     web:
       exposure:
         include: "*"
+        
+        
+        
+country-url: https://restcountries.com/v3.1/all
