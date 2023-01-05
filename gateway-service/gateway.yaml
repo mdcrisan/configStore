@@ -1,1 +1,42 @@
-#
+server:
+  port: 9000
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: '*'
+            allowedHeaders: '*'
+            allowedMethods: '*'
+  application:
+    name: gateway
+  profiles:
+    active: local
+  config:
+    import: optional:configserver:http://localhost:8001
+management:
+  endpoints:
+    jmx:
+      exposure:
+        include: "*"
+  info:
+    env:
+      enabled: true
+info:
+  app:
+    name: Gateway Service
+    description: Gateway microservice
+    version: 1.0.0
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9002/eureka/
+
