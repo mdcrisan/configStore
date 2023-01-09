@@ -4,7 +4,15 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver 
-    
+
+client:
+  id: admin-cli
+cient: 
+  secret: e7b83f44-96a7-4f59-a8a5-3cd0689d93df
+keycloak:
+  url: http://localhost:8088/auth/realms/master/protocol/openid-connect/token
+grant: 
+  type: password
     
 eureka:
   client:
