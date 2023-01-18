@@ -8,7 +8,7 @@ spring:
 client:
   id: admin-cli
 cient: 
-  secret: e7b83f44-96a7-4f59-a8a5-3cd0689d93df
+  secret: 402b9fb3-637e-4913-82c6-847a4d352fa3
 keycloak:
   url: http://localhost:8080/auth/realms/master/protocol/openid-connect/token
   usercreateurl: http://localhost:8080/auth/admin/realms/master/users
